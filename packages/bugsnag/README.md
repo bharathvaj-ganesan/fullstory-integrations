@@ -59,10 +59,10 @@ You also need to replace `__FULLSTORY_ORG_ID__` with the value of `_fs_org` in t
 
 ## How it works
 
-In Bugssnag, you should see additional tab called `FullStory` for the error event which will have `urlAtTime`.
+In Bugssnag, you should see additional tab called `FULLSTORY` for the error event which will have `urlAtTime`.
 
-![BugSnag](https://i.imgur.com/O4r4Wvq.png)
+![BugSnag](../../media/bugsnag.png)
 
-In FullStory, you should see an event called `Sentry Error` on the right sidebar that has a link to the error in Sentry:
+In FullStory, you should see an event called `BugSnag Error` on the right sidebar.
 
-![FullStory](https://i.imgur.com/FutjI0R.png)
+![FullStory](../../media/fs-bugsnag.png)
