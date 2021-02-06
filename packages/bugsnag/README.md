@@ -4,6 +4,20 @@ The FullStory-Bugsnag integration seamlessly integrates the FullStorys and Bugsn
 to the FullStory session replay at that exact moment in time. When you are watching a FullStory replay and your user experiences an error, you will see a custom
 error with the basic error details.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of content**
+
+  - [Pre-Requisites](#pre-requisites)
+  - [Installation](#installation)
+  - [Setup](#setup)
+    - [Code Changes](#code-changes)
+    - [Options](#options)
+- [Roadmap](#roadmap)
+  - [How it works](#how-it-works)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Pre-Requisites
 
 For the FullStory-Bugsnag integration to work, you must have the [FullStory browser SDK package](https://www.npmjs.com/package/@fullstory/browser) and the
@@ -50,6 +64,25 @@ Replace `__YOUR_API_KEY__` with the API found in Project Settings.
 
 You also need to replace `__FULLSTORY_ORG_ID__` with the value of `_fs_org` in the FullStory recording snippet on your
 [FullStory settings page](https://help.fullstory.com/hc/en-us/articles/360020623514).
+
+### Options
+
+You can also customize the error event name in FullStory by
+
+```js
+// ...
+Bugsnag.start({
+  apiKey: '__YOUR_API_KEY__',
+  plugins: [
+    new BugsnagFullStory({
+      fsEventName: 'Custom Error Name',
+    }),
+  ],
+  // ...
+});
+
+//...
+```
 
 # Roadmap
 
