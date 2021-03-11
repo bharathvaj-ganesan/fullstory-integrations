@@ -1,6 +1,6 @@
-# fullstory-bugsnag
+# fullstory-rollbar
 
-The FullStory-Bugsnag integration seamlessly integrates the FullStorys and Bugsnag platforms. When you look at a browser error in Bugsnag, you will see a link
+The FullStory-rollbar integration seamlessly integrates the FullStorys and rollbar platforms. When you look at a browser error in rollbar, you will see a link
 to the FullStory session replay at that exact moment in time. When you are watching a FullStory replay and your user experiences an error, you will see a custom
 error with the basic error details.
 
@@ -21,8 +21,8 @@ error with the basic error details.
 
 ## Pre-Requisites
 
-For the FullStory-Bugsnag integration to work, you must have the [FullStory browser SDK package](https://www.npmjs.com/package/@fullstory/browser) and the
-[Bugsnag browser SDK package](https://www.npmjs.com/package/@bugsnag/browser).
+For the FullStory-rollbar integration to work, you must have the [FullStory browser SDK package](https://www.npmjs.com/package/@fullstory/browser) and the
+[rollbar browser SDK package](https://www.npmjs.com/package/rollbar).
 
 ## Installation
 
@@ -31,36 +31,36 @@ To install the stable version:
 with npm:
 
 ```
-npm install --save @bharathvaj/fullstory-bugsnag
+npm install --save @bharathvaj/fullstory-rollbar
 ```
 
 with yarn:
 
 ```
-yarn add @bharathvaj/fullstory-bugsnag
+yarn add @bharathvaj/fullstory-rollbar
 ```
 
 ## Setup
 
 ### Code Changes
 
-To set up the integration, both FullStory and Bugsnag need to be initialized. Please add the following code:
+To set up the integration, both FullStory and rollbar need to be initialized. Please add the following code:
 
 ```js
-import Bugsnag from '@bugsnag/js';
+import Rollbar from 'rollbar';
 import * as FullStory from '@fullstory/browser';
-import BugsnagFullStory from '@bharathvaj/fullstory-bugsnag';
+import RollbarFullStory from '@bharathvaj/fullstory-rollbar';
 
 FullStory.init({ orgId: '__FULLSTORY_ORG_ID__' });
 
-Bugsnag.start({
-  apiKey: '__YOUR_API_KEY__',
-  plugins: [new BugsnagFullStory(options)],
-  // ...
+const rollbar = new rollbar({
+  accessToken: '__YOUR_API_KEY__',
 });
+
+RollbarFullStory.init(rollbar, options);
 ```
 
-Replace `__YOUR_API_KEY__` with the API found in Project Settings.
+Replace `__YOUR_API_KEY__` with the API found in Settings > Project Access Tokens.
 
 You also need to replace `__FULLSTORY_ORG_ID__` with the value of `_fs_org` in the FullStory recording snippet on your
 [FullStory settings page](https://help.fullstory.com/hc/en-us/articles/360020623514).
@@ -71,14 +71,8 @@ You can also customize the error event name in FullStory by
 
 ```js
 // ...
-Bugsnag.start({
-  apiKey: '__YOUR_API_KEY__',
-  plugins: [
-    new BugsnagFullStory({
-      fsEventName: 'Custom Error Name',
-    }),
-  ],
-  // ...
+RollbarFullStory.init(rollbar, {
+  fsEventName: 'Custom Error Name',
 });
 
 //...
@@ -86,18 +80,16 @@ Bugsnag.start({
 
 # Roadmap
 
-[ ] - Support Bugsnag Error link in FullStory Custom Event.
+[ ] - Support rollbar Error link in FullStory Custom Event.
 
 [ ] - Add Unit test cases
-
-[ ] - ~~Register this integration as plugin to bugsnap core library~~
 
 ## How it works
 
 In Bugssnag, you should see additional tab called `FULLSTORY` for the error event which will have `urlAtTime`.
 
-![BugSnag](https://i.imgur.com/RveF1F8.png)
+![rollbar](https://i.imgur.com/RveF1F8.png)
 
-In FullStory, you should see an event called `BugSnag Error` on the right sidebar.
+In FullStory, you should see an event called `rollbar Error` on the right sidebar.
 
 ![FullStory](https://i.imgur.com/a26RBtf.png)
