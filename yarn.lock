@@ -5464,6 +5464,11 @@ tr46@^2.0.2:
   dependencies:
     punycode "^2.1.1"
 
+trackjs@^2.21.1:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/trackjs/-/trackjs-3.9.0.tgz#10cae3b854b146802342b79e1b4511a4d45c9c21"
+  integrity sha512-11kVTu0W4QQtRT0Y+bX+HlQkd7kdvYYc4Gtwl/kuB5GWjJfYfYHr+PvczLiSwgcg+CrlX4AU8Ig/LD6PLyXFmw==
+
 traverse-chain@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/traverse-chain/-/traverse-chain-0.1.0.tgz#61dbc2d53b69ff6091a12a168fd7d433107e40f1"
