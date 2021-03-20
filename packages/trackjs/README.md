@@ -57,7 +57,7 @@ TrackJS.install({
   token: '__YOUR_API_KEY__',
 });
 
-TrackJSFullStory.init(options);
+TrackJSFullStory.init(TrackJS, options);
 ```
 
 Replace `__YOUR_API_KEY__` with the API found in Settings > Project Access Tokens.
@@ -71,7 +71,7 @@ You can also customize the error event name in FullStory by
 
 ```js
 // ...
-TrackJSFullStory.init({
+TrackJSFullStory.init(TrackJS, {
   fsEventName: 'Custom Error Name',
 });
 
@@ -97,4 +97,4 @@ In Trackjs, you should see additional tab called `FULLSTORY` for the error event
 
 In FullStory, you should see an event called `trackjs Error` on the right sidebar.
 
-![FullStory](   )
+![FullStory]()
