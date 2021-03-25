@@ -15,15 +15,16 @@ class TrackJSFullStory {
 
     const fsEventName = options?.fsEventName || 'TrackJS Error';
     const key = 'fullstoryUrl';
-    const value = FullStory.getCurrentSessionURL(true) || 'current session URL API not ready';
 
     /**
      * Returns Trackjs's Error event URL
      * @returns string 
      */
-    const getTrackjsUrl = () => `https://my.trackjs.com/metadata?key=${key}&value=${value}`;
+    const getTrackjsUrl = (value) => `https://my.trackjs.com/metadata?key=${key}&value=${value}`;
 
     const onError = (payload): boolean => {
+      const value = FullStory.getCurrentSessionURL(true) || 'current session URL API not ready';
+      const trackjsUrl = getTrackjsUrl(value);
 
       payload.metadata.push({
         key,
@@ -32,7 +33,7 @@ class TrackJSFullStory {
 
       // FS.event is immediately ready even if FullStory isn't fully bootstrapped
       FullStory.event(fsEventName, {
-        trackjsUrl: getTrackjsUrl(),
+        trackjsUrl,
         ...getOriginalExceptionProperties(event)
       });
       return true;
