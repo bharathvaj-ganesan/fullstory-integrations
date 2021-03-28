@@ -85,7 +85,7 @@ Please note that this integration makes use of `onError` hook provided by the Tr
 
 # Roadmap
 
-[ ] - Support trackjs Error link in FullStory Custom Event.
+[x] - ~~Support trackjs Error link in FullStory Custom Event.~~
 
 [ ] - Add Unit test cases
 

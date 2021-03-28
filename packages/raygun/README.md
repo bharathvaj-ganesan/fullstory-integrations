@@ -1,8 +1,8 @@
-# fullstory-trackjs
+# fullstory-raygun
 
-The FullStory-trackjs integration seamlessly integrates the FullStorys and trackjs platforms. When you look at a browser error in trackjs, you will see a link
-to the FullStory session replay at that exact moment in time under meta data section. When you are watching a FullStory replay and your user experiences an
-error, you will see a custom error with the basic error details and link to trackjs meta data.
+The FullStory-raygun integration seamlessly integrates the FullStorys and raygun platforms. When you look at a browser error in raygun, you will see a link to
+the FullStory session replay at that exact moment in time under meta data section. When you are watching a FullStory replay and your user experiences an error,
+you will see a custom error with the basic error details and link to raygun meta data.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -21,8 +21,8 @@ error, you will see a custom error with the basic error details and link to trac
 
 ## Pre-Requisites
 
-For the FullStory-trackjs integration to work, you must have the [FullStory browser SDK package](https://www.npmjs.com/package/@fullstory/browser) and the
-[TrackJS browser SDK package](https://www.npmjs.com/package/trackjs).
+For the FullStory-raygun integration to work, you must have the [FullStory browser SDK package](https://www.npmjs.com/package/@fullstory/browser) and the
+[Raygun browser SDK package](https://www.npmjs.com/package/raygun4js).
 
 ## Installation
 
@@ -31,33 +31,32 @@ To install the stable version:
 with npm:
 
 ```
-npm install --save @bharathvaj/fullstory-trackjs
+npm install --save @bharathvaj/fullstory-raygun
 ```
 
 with yarn:
 
 ```
-yarn add @bharathvaj/fullstory-trackjs
+yarn add @bharathvaj/fullstory-raygun
 ```
 
 ## Setup
 
 ### Code Changes
 
-To set up the integration, both FullStory and trackjs need to be initialized. Please add the following code:
+To set up the integration, both FullStory and raygun need to be initialized. Please add the following code:
 
 ```js
-import { TrackJS } from 'trackjs';
+import rg4js from 'raygun4js';
 import * as FullStory from '@fullstory/browser';
-import TrackJSFullStory from '@bharathvaj/fullstory-trackjs';
+import RaygunFullStory from '@bharathvaj/fullstory-raygun';
 
 FullStory.init({ orgId: '__FULLSTORY_ORG_ID__' });
 
-TrackJS.install({
-  token: '__YOUR_API_KEY__',
-});
+rg4js('enableCrashReporting', true);
+rg4js('apiKey', '__YOUR_API_KEY__');
 
-TrackJSFullStory.init(TrackJS, options);
+RaygunFullStory.init(rg4js);
 ```
 
 Replace `__YOUR_API_KEY__` with the API found in Settings > Project Access Tokens.
@@ -71,30 +70,25 @@ You can also customize the error event name in FullStory by
 
 ```js
 // ...
-TrackJSFullStory.init(TrackJS, {
+RaygunFullStory.init(rg4js, {
   fsEventName: 'Custom Error Name',
 });
 
 //...
 ```
 
-# Caveats
-
-Please note that this integration makes use of `onError` hook provided by the TrackJS library. So using this library will override if you have configured
-`onError` while installing the TrackJS library.s
-
 # Roadmap
 
-[ ] - Support trackjs Error link in FullStory Custom Event.
+[ ] - Support Raygun Error link in FullStory Custom Event.
 
 [ ] - Add Unit test cases
 
 ## How it works
 
-In Trackjs, you should see additional tab called `FULLSTORY` for the error event which will have `urlAtTime`.
+In Raygun, you should see additional tab called `FULLSTORY` for the error event which will have `urlAtTime`.
 
-![trackjs](https://i.imgur.com/m0Nu4Yg.png)
+![Raygun](https://i.imgur.com/XnEyRPv.png)
 
-In FullStory, you should see an event called `trackjs Error` on the right sidebar.
+In FullStory, you should see an event called `Raygun Error` on the right sidebar.
 
 ![FullStory](https://i.imgur.com/a26RBtf.png)
