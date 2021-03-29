@@ -13,7 +13,7 @@ _Please note that these are community packages and not official one._
 
 **Table of content**
 
-- [Why](#why)
+- [Purpose](#purpose)
 - [Integrations Supported](#integrations-supported)
 - [License](#license)
 
