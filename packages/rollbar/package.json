@@ -1,5 +1,6 @@
 {
-  "name": "@bharathvaj/bar",
+  "name": "@bharathvaj/rollbar",
+  "description": "Fullstory Rollbar Integration",
   "version": "1.0.0",
   "main": "dist/index",
   "types": "dist/index",
@@ -12,9 +13,6 @@
     "compile": "tsc -p tsconfig.build.json",
     "prepublishOnly": "yarn run build",
     "test": "yarn run build"
-  },
-  "dependencies": {
-    "@bharathvaj/foo": "^1.0.0"
   },
   "devDependencies": {
     "rimraf": "~3.0.2",
