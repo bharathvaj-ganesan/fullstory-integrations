@@ -1,3 +1,1 @@
-module.exports = {
-  extends: "@nighttrax/eslint-config-tsx",
-};
+module.exports = {};

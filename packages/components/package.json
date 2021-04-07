@@ -1,5 +1,5 @@
 {
-  "name": "@nighttrax/components",
+  "name": "@bharathvaj/components",
   "version": "1.0.0",
   "main": "dist/index",
   "types": "dist/index",
@@ -14,7 +14,7 @@
     "react": "~17.0.0"
   },
   "dependencies": {
-    "@nighttrax/foo": "*"
+    "@bharathvaj/foo": "*"
   },
   "devDependencies": {
     "@types/react": "~17.0.0"

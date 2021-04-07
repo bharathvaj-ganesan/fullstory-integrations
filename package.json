@@ -1,10 +1,9 @@
 {
-  "name": "ts-monorepo",
-  "description": "Template for setting up a TypeScript monorepo",
+  "name": "@bharathvaj/fullstory-integrations",
+  "description": "Fullstory integration Packages",
   "private": true,
   "workspaces": [
-    "packages/*",
-    "examples/*"
+    "packages/*"
   ],
   "scripts": {
     "docs": "doctoc --title '**Table of content**' README.md",
@@ -14,7 +13,6 @@
     "test": "lerna run test"
   },
   "devDependencies": {
-    "@nighttrax/eslint-config-tsx": "~8.0.0",
     "doctoc": "~2.0.0",
     "eslint": "~7.23.0",
     "lerna": "~4.0.0",
