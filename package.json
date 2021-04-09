@@ -9,7 +9,7 @@
     "docs": "doctoc . --title '**Table of content**' README.md",
     "clean": "lerna run clean",
     "build": "lerna run build",
-    "publish-ci": "lerna publish from-package -y",
+    "publish-ci": "lerna publish from-package -y -- --access=public",
     "changeset": "changeset",
     "test": "lerna run test"
   },
