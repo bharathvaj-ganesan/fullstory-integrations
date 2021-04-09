@@ -97,8 +97,8 @@ Bugsnag.start({
 
 In Bugssnag, you should see additional tab called `FULLSTORY` for the error event which will have `urlAtTime`.
 
-![BugSnag](../../media/bugsnag.png)
+![BugSnag](https://i.imgur.com/RveF1F8.png)
 
 In FullStory, you should see an event called `BugSnag Error` on the right sidebar.
 
-![FullStory](../../media/fs-bugsnag.png)
+![FullStory](https://i.imgur.com/a26RBtf.png)
