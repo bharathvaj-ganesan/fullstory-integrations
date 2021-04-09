@@ -2,8 +2,9 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es5",
-    "sourceMap": true,
-    "noEmitOnError": true
+    "sourceMap": false,
+    "noEmitOnError": true,
+    "declaration": true
   },
 
   "exclude": [

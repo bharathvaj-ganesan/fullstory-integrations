@@ -1,4 +1,3 @@
-import Bugsnag from '@bugsnag/browser';
 import * as FullStory from '@fullstory/browser';
 import { getOriginalExceptionProperties } from './utils';
 
@@ -7,11 +6,20 @@ import { getOriginalExceptionProperties } from './utils';
  * It also creates a link from the FullStory event to the Bugsnag error.
  */
 
-type Options = {};
+type Options = {
+  fsEventName: string;
+};
 
 class BugsnagFullStory {
-  constructor() { }
-  setupOnce() {
+  private fsEventName = 'Bugsnag Error';
+  private name;
+
+  constructor(options?: Options) {
+    this.name = 'FullStory'
+    this.fsEventName = options?.fsEventName || this.fsEventName;
+  }
+
+  load(client) {
 
     /**
      * Returns Bugsnag's Error event URL
@@ -24,13 +32,13 @@ class BugsnagFullStory {
         urlAtTime: FullStory.getCurrentSessionURL(true) || 'current session URL API not ready',
       });
       // FS.event is immediately ready even if FullStory isn't fully bootstrapped
-      FullStory.event('Bugsnag Error', {
+      FullStory.event(this.fsEventName, {
         bugsnagUrl: getBugsnagUrl(),
         ...getOriginalExceptionProperties(event)
       });
     }
 
-    Bugsnag.addOnError(cb);
+    client.addOnError(cb);
   }
 
 }

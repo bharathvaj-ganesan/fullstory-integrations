@@ -1,3 +1,3 @@
-import BugsnagFullStory from '.BugsnagFullStory';
+import BugsnagFullStory from './BugsnagFullStory';
 
 export default BugsnagFullStory;
