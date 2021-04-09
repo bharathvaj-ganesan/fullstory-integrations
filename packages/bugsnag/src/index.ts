@@ -1,1 +1,3 @@
-export const meaningOfLife = 42;
+import BugsnagFullStory from '.BugsnagFullStory';
+
+export default BugsnagFullStory;
