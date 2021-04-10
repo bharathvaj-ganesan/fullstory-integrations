@@ -6,14 +6,13 @@ error with the basic error details.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
 **Table of content**
 
-- [Pre-Requisites](#pre-requisites)
-- [Installation](#installation)
-- [Setup](#setup)
-  - [Code Changes](#code-changes)
-  - [Options](#options)
+  - [Pre-Requisites](#pre-requisites)
+  - [Installation](#installation)
+  - [Setup](#setup)
+    - [Code Changes](#code-changes)
+    - [Options](#options)
 - [Roadmap](#roadmap)
   - [How it works](#how-it-works)
 
@@ -46,7 +45,7 @@ yarn add @bharathvaj/fullstory-bugsnag
 
 To set up the integration, both FullStory and Bugsnag need to be initialized. Please add the following code:
 
-```
+```js
 import Bugsnag from '@bugsnag/js';
 import * as FullStory from '@fullstory/browser';
 import BugsnagFullStory from '@bharathvaj/fullstory-bugsnag';
@@ -58,7 +57,6 @@ Bugsnag.start({
   plugins: [new BugsnagFullStory(options)],
   // ...
 });
-
 ```
 
 Replace `__YOUR_API_KEY__` with the API found in Project Settings.
