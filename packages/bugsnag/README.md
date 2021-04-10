@@ -45,7 +45,7 @@ yarn add @bharathvaj/fullstory-bugsnag
 
 To set up the integration, both FullStory and Bugsnag need to be initialized. Please add the following code:
 
-```
+```js
 import Bugsnag from '@bugsnag/js';
 import * as FullStory from '@fullstory/browser';
 import BugsnagFullStory from '@bharathvaj/fullstory-bugsnag';
@@ -57,7 +57,6 @@ Bugsnag.start({
   plugins: [new BugsnagFullStory(options)],
   // ...
 });
-
 ```
 
 Replace `__YOUR_API_KEY__` with the API found in Project Settings.

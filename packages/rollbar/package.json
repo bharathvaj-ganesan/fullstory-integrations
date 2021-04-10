@@ -1,6 +1,6 @@
 {
-  "name": "@bharathvaj/fullstory-bugsnag",
-  "description": "Fullstory Bugsnag Integration",
+  "name": "@bharathvaj/fullstory-rollbar",
+  "description": "Fullstory Rollbar Integration",
   "version": "1.0.0",
   "main": "dist/index",
   "types": "dist/index.d.ts",
@@ -8,7 +8,7 @@
     "dist"
   ],
   "keywords": [
-    "bugsnag",
+    "rollbar",
     "fullstory",
     "integration"
   ],
@@ -19,11 +19,11 @@
     "test": "yarn run build"
   },
   "peerDependencies": {
-    "@bugsnag/core": ">=7.0.0",
+    "rollbar": ">=2.0.0",
     "@fullstory/browser": ">=1.0.0"
   },
   "devDependencies": {
-    "@bugsnag/core": "^7.9.2",
+    "rollbar": "^2.21.1",
     "@fullstory/browser": "^1.4.9",
     "tslib": "^2.2.0"
   },
