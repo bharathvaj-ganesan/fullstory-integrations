@@ -6,13 +6,14 @@ error with the basic error details.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
 **Table of content**
 
-  - [Pre-Requisites](#pre-requisites)
-  - [Installation](#installation)
-  - [Setup](#setup)
-    - [Code Changes](#code-changes)
-    - [Options](#options)
+- [Pre-Requisites](#pre-requisites)
+- [Installation](#installation)
+- [Setup](#setup)
+  - [Code Changes](#code-changes)
+  - [Options](#options)
 - [Roadmap](#roadmap)
   - [How it works](#how-it-works)
 
@@ -85,9 +86,9 @@ RollbarFullStory.init(rollbar, {
 
 ## How it works
 
-In Bugssnag, you should see additional tab called `FULLSTORY` for the error event which will have `urlAtTime`.
+In Rollbar, you should see additional tab called `FULLSTORY` for the error event which will have `urlAtTime`.
 
-![rollbar](https://i.imgur.com/RveF1F8.png)
+![rollbar](https://i.imgur.com/agEgd5a.png)
 
 In FullStory, you should see an event called `rollbar Error` on the right sidebar.
 
