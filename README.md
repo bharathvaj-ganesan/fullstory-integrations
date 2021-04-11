@@ -4,13 +4,6 @@
 
 These packages helps you to seamlessly integrate with FullStory platform.
 
-Supported integerations are mentioned below.
-
-Whenever you have an event captured in any of the following service you will see a link to the FullStory session replay at that exact moment in time.
-
-Also, when you are watching a FullStory replay and your user experiences an error, you might see a custom error event that contains the error details along with
-the link that will take you to that error in respective integrated service.
-
 _Please note that these are community packages and not official one._
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://shields.io/)
@@ -24,6 +17,15 @@ _Please note that these are community packages and not official one._
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Why
+
+Whenever you have an event captured in any of the following service you will see a link to the FullStory session replay at that exact moment in time.
+
+Also, when you are watching a FullStory replay and your user experiences an error, you might see a custom error event that contains the error details along with
+the link that will take you to that error in respective integrated service.
+
+Supported integerations are mentioned below.
 
 ## Integrations Supported
 
