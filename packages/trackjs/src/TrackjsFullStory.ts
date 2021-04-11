@@ -1,5 +1,4 @@
 import * as FullStory from '@fullstory/browser';
-import { TrackJS } from 'trackjs';
 import { getOriginalExceptionProperties } from './utils';
 
 /**
@@ -12,21 +11,23 @@ type Options = {
 };
 
 class TrackJSFullStory {
-  static init(options?: Options) {
+  static init(client, options?: Options) {
+
     const fsEventName = options?.fsEventName || 'TrackJS Error';
     const key = 'fullstoryUrl';
+    const value = FullStory.getCurrentSessionURL(true) || 'current session URL API not ready';
 
     /**
      * Returns Trackjs's Error event URL
      * @returns string 
      */
-    const getTrackjsUrl = () => `https://my.trackjs.com/metadata?key=${key}`;
+    const getTrackjsUrl = () => `https://my.trackjs.com/metadata?key=${key}&value=${value}`;
 
     const onError = (payload): boolean => {
 
       payload.metadata.push({
         key,
-        value: FullStory.getCurrentSessionURL(true) || 'current session URL API not ready'
+        value
       })
 
       // FS.event is immediately ready even if FullStory isn't fully bootstrapped
@@ -37,9 +38,12 @@ class TrackJSFullStory {
       return true;
     }
 
-    TrackJS.configure({
-      onError
-    })
+    // Check if TrackJS is installed and configure
+    if (client.isInstalled()) {
+      client.configure({
+        onError
+      })
+    }
   }
 
 }

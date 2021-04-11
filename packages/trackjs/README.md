@@ -93,8 +93,8 @@ Please note that this integration makes use of `onError` hook provided by the Tr
 
 In Trackjs, you should see additional tab called `FULLSTORY` for the error event which will have `urlAtTime`.
 
-![trackjs](https://i.imgur.com/agEgd5a.png)
+![trackjs](https://i.imgur.com/m0Nu4Yg.png)
 
 In FullStory, you should see an event called `trackjs Error` on the right sidebar.
 
-![FullStory](https://i.imgur.com/a26RBtf.png)
+![FullStory](   )
