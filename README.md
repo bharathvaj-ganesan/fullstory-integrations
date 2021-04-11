@@ -8,6 +8,7 @@ _Please note that these are community packages and not official one._
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
 **Table of content**
 
 - [Integrations supported](#integrations-supported)
@@ -21,6 +22,7 @@ _Please note that these are community packages and not official one._
 | --------------------------- | -------------------------------------------------------------------------- |
 | [Bugsnag](packages/bugsnag) | ![Bugsnag](https://img.shields.io/npm/v/@bharathvaj/fullstory-bugsnag.svg) |
 | [Rollbar](packages/rollbar) | ![Rollbar](https://img.shields.io/npm/v/@bharathvaj/fullstory-rollbar.svg) |
+| [TrackJS](packages/trackjs) | ![TrackJS](https://img.shields.io/npm/v/@bharathvaj/fullstory-trackjs.svg) |
 
 ## License
 
