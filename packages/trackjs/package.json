@@ -19,11 +19,11 @@
     "test": "yarn run build"
   },
   "peerDependencies": {
-    "trackjs": ">=2.0.0",
+    "trackjs": ">=3.0.0",
     "@fullstory/browser": ">=1.0.0"
   },
   "devDependencies": {
-    "trackjs": "^2.21.1",
+    "trackjs": "3.9.0",
     "@fullstory/browser": "^1.4.9",
     "tslib": "^2.2.0"
   },
