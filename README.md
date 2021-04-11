@@ -10,6 +10,7 @@ _Please note that these are community packages and not official one._
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
 **Table of content**
 
 - [Why](#why)
@@ -18,7 +19,7 @@ _Please note that these are community packages and not official one._
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Why
+## Purpose
 
 Whenever you have an event captured in any of the following service you will see a link to the FullStory session replay at that exact moment in time.
 
