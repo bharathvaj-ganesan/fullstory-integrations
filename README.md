@@ -22,6 +22,7 @@ _Please note that these are community packages and not official one._
 | --------------------------- | -------------------------------------------------------------------------- |
 | [Bugsnag](packages/bugsnag) | ![Bugsnag](https://img.shields.io/npm/v/@bharathvaj/fullstory-bugsnag.svg) |
 | [Rollbar](packages/rollbar) | ![Rollbar](https://img.shields.io/npm/v/@bharathvaj/fullstory-rollbar.svg) |
+| [TrackJS](packages/trackjs) | ![TrackJS](https://img.shields.io/npm/v/@bharathvaj/fullstory-trackjs.svg) |
 
 ## License
 

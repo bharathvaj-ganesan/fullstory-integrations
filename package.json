@@ -6,7 +6,9 @@
     "packages/*"
   ],
   "scripts": {
-    "docs": "doctoc . --title '**Table of content**' README.md",
+    "docs": "npm run docs:root && npm run docs:packages",
+    "docs:root": "doctoc README.md --title '**Table of content**'",
+    "docs:packages": "doctoc packages/*/README.md --title '**Table of content**' ",
     "clean": "lerna run clean",
     "build": "lerna run build",
     "publish-ci": "lerna publish from-package -y",
