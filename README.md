@@ -16,7 +16,7 @@ _Please note that these are community packages and not official one._
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Integrations supported
+## Integrations Supported
 
 | Integrations                | Version                                                                    |
 | --------------------------- | -------------------------------------------------------------------------- |
