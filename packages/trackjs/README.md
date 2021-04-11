@@ -6,14 +6,14 @@ error, you will see a custom error with the basic error details and link to trac
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
 **Table of content**
 
-- [Pre-Requisites](#pre-requisites)
-- [Installation](#installation)
-- [Setup](#setup)
-  - [Code Changes](#code-changes)
-  - [Options](#options)
+  - [Pre-Requisites](#pre-requisites)
+  - [Installation](#installation)
+  - [Setup](#setup)
+    - [Code Changes](#code-changes)
+    - [Options (Optional)](#options-optional)
+- [Caveats](#caveats)
 - [Roadmap](#roadmap)
   - [How it works](#how-it-works)
 
