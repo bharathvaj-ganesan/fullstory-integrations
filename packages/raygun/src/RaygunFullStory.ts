@@ -21,10 +21,10 @@ class RaygunFullStory {
      */
     const getRaygunUrl = () => `Could not retrieve url`;
 
-    client('', () => {
+    client('withCustomData', () => {
       // FS.event is immediately ready even if FullStory isn't fully bootstrapped
       FullStory.event(fsEventName, {
-        trackjsUrl: getRaygunUrl(),
+        raygunUrl: getRaygunUrl(),
         ...getOriginalExceptionProperties(event)
       });
       return {
