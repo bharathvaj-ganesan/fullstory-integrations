@@ -97,4 +97,4 @@ In Trackjs, you should see additional tab called `FULLSTORY` for the error event
 
 In FullStory, you should see an event called `trackjs Error` on the right sidebar.
 
-![FullStory]()
+![FullStory](https://i.imgur.com/a26RBtf.png)
