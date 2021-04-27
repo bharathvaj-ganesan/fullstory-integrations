@@ -2,8 +2,8 @@ import * as FullStory from '@fullstory/browser';
 import { getOriginalExceptionProperties } from './utils';
 
 /**
- * This integration creates a link from the Bugsnag Error to the FullStory replay.
- * It also creates a link from the FullStory event to the Bugsnag error.
+ * This integration creates a link from the  Airbrake Error to the FullStory replay.
+ * It also creates a link from the FullStory event to the  Airbrake error.
  */
 
 type Options = {
