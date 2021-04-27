@@ -87,6 +87,10 @@ AirbrakeFullStory.init(airbrakeNotifier, {
 
 ## How it works
 
-In Airbrake, you should see the `fullstoryUrl` in the context tab under occurences of an Error
+In Airbrake, you should see the `fullstoryUrl` in the context tab under occurences of an Error.
+
+![Airbrake](https://i.imgur.com/bwMMLFA.png)
 
 In FullStory, you should see an event called `Airbrake Error` on the right sidebar along with the Airbrake'e error URL.
+
+![FullStory](https://i.imgur.com/emqBOm3.png)

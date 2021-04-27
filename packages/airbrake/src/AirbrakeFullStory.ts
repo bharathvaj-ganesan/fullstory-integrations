@@ -20,7 +20,7 @@ class AirbrakeFullStory {
 
       // Add fullstory link to Airbrake
       client.addFilter((notice) => {
-        notice.context.fullStoryLink = FullStory.getCurrentSessionURL(true) || 'current session URL API not ready';
+        notice.context.fullstoryUrl = FullStory.getCurrentSessionURL(true) || 'current session URL API not ready';
         return notice;
       });
 
