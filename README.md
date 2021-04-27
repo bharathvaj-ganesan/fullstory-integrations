@@ -36,6 +36,7 @@ Supported integerations are mentioned below.
 | [Rollbar](packages/rollbar) | ![Rollbar](https://img.shields.io/npm/v/@bharathvaj/fullstory-rollbar.svg) |
 | [TrackJS](packages/trackjs) | ![TrackJS](https://img.shields.io/npm/v/@bharathvaj/fullstory-trackjs.svg) |
 | [Raygun](packages/raygun)   | ![Raygun](https://img.shields.io/npm/v/@bharathvaj/fullstory-raygun.svg)   |
+| [Airbrake](packages/airbrake)   | ![Raygun](https://img.shields.io/npm/v/@bharathvaj/fullstory-airbrake.svg)   |
 
 ## License
 
