@@ -1,7 +1,7 @@
 {
   "name": "@bharathvaj/fullstory-airbrake",
   "description": "Fullstory Airbrake Integration",
-  "version": "1.1.0",
+  "version": "0.0.0",
   "main": "dist/index",
   "types": "dist/index.d.ts",
   "files": [
