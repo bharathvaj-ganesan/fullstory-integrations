@@ -1,0 +1,39 @@
+{
+  "name": "@bharathvaj/fullstory-airbrake",
+  "description": "Fullstory Airbrake Integration",
+  "version": "1.1.0",
+  "main": "dist/index",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "airbrake",
+    "fullstory",
+    "integration"
+  ],
+  "scripts": {
+    "clean": "rimraf -rf ./dist",
+    "build": "yarn clean && tsc -p tsconfig.build.json",
+    "prepublishOnly": "yarn run build",
+    "test": "yarn run build"
+  },
+  "peerDependencies": {
+    "@airbrake/browser": ">=2.1.0",
+    "@fullstory/browser": ">=1.0.0"
+  },
+  "devDependencies": {
+    "@airbrake/browser": "2.1.4",
+    "@fullstory/browser": "^1.4.9",
+    "tslib": "^2.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Bharathvaj Ganesan <bharathvaj1995@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bharathvaj-ganesan/fullstory-integrations/issues"
+  },
+  "homepage": "https://github.com/bharathvaj-ganesan/fullstory-integrations#readme"
+}
