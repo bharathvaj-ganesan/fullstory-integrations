@@ -19,13 +19,13 @@
     "test": "yarn run build"
   },
   "peerDependencies": {
-    "rollbar": ">=2.0.0",
-    "@fullstory/browser": ">=1.0.0"
+    "@fullstory/browser": ">=1.0.0",
+    "rollbar": ">=2.0.0"
   },
   "devDependencies": {
-    "rollbar": "^2.21.1",
-    "@fullstory/browser": "^1.4.9",
-    "tslib": "^2.2.0"
+    "@fullstory/browser": "^2.0.5",
+    "rollbar": "^2.26.4",
+    "tslib": "^2.8.0"
   },
   "publishConfig": {
     "access": "public"
